@@ -39,7 +39,7 @@ A machine learning solution that identifies spam emails with **96.7% accuracy**,
 - pandas | numpy | scikit-learn
 
 ```bash
-git clone https://github.com/yourusername/spam-detector.git
+git clone https://github.com/Arpita-Panigrahi/Spam-mail-detector.git
 pip install -r requirements.txt
 ```
 
