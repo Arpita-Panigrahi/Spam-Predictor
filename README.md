@@ -1,90 +1,90 @@
-```markdown
 # Spam Detection AI: Email Classification System
 
-## Project Overview  
-A machine learning solution that identifies spam emails with **96.7% accuracy**, combining technical rigor with modern development practices. Built for both effectiveness and resume impact.
+## Project Overview
+A machine learning solution that identifies spam emails with **96.7% accuracy**, leveraging natural language processing and classification algorithms for reliable message filtering.
 
 ---
 
-### Core Features  
-🔍 **Advanced NLP**: TF-IDF vectorization for text analysis  
-📈 **Optimized Model**: Logistic Regression classifier  
-📂 **Quality Data**: 5,572 messages from the [SMS Spam Collection Dataset](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset)  
+### Core Features
+- **TF-IDF Vectorization**: Optimized text feature extraction
+- **Logistic Regression Classification**: Efficient binary prediction model
+- **Data Foundation**: 5,572 messages from the SMS Spam Collection Dataset
 
 ---
 
-## Technical Breakdown  
+## Technical Implementation
 
-### Workflow  
-1. **Data Preparation**:  
-   - Null value handling  
-   - Binary encoding (spam=0, ham=1)  
-2. **Feature Engineering**:  
-   - TF-IDF with English stop words  
-3. **Model Training**:  
-   - 80/20 data split  
-   - Logistic Regression implementation  
+### Pipeline
+1. **Data Preparation**:
+   - Null value handling
+   - Label encoding (spam=0, ham=1)
+2. **Feature Engineering**:
+   - TF-IDF vectorization with stop word removal
+3. **Model Development**:
+   - 80/20 train/test split
+   - Logistic Regression implementation
 
-### Performance  
-| Metric        | Score   |  
-|---------------|---------|  
-| Training Accuracy | 96.7% |  
-| Testing Accuracy  | 96.6% |  
+### Performance Metrics
+| Metric | Score |
+|--------|-------|
+| Training Accuracy | 96.7% |
+| Testing Accuracy | 96.6% |
 
 ---
 
-## Development Setup  
+## Environment Setup
 
-### Requirements  
-- Python 3.8+  
-- pandas | numpy | scikit-learn  
+### Requirements
+- Python 3.8+
+- pandas | numpy | scikit-learn
 
-```bash  
-git clone https://github.com/yourusername/spam-detector.git  
-pip install -r requirements.txt  
+```bash
+git clone https://github.com/yourusername/spam-detector.git
+pip install -r requirements.txt
 ```
 
 ---
 
-## Implementation Example  
+## Implementation Example
 
-```python  
-# Initialize classifier  
-vectorizer = TfidfVectorizer(min_df=1, stop_words='english')  
-model = LogisticRegression()  
+```python
+# Initialize classifier
+vectorizer = TfidfVectorizer(min_df=1, stop_words='english')
+model = LogisticRegression()
 
-# Predict spam  
-sample_email = ["Congratulations! You've won a $500 Amazon gift card"]  
-features = vectorizer.transform(sample_email)  
-print("Spam" if model.predict(features)[0] == 0 else "Legitimate")  
+# Classify message
+sample_email = ["Congratulations! You've won a $500 Amazon gift card"]
+features = vectorizer.transform(sample_email)
+prediction = "Spam" if model.predict(features)[0] == 0 else "Legitimate"
 ```
 
 ---
 
-## Why It Works  
-- **TF-IDF**: Prioritizes rare, meaningful words over common terms  
-- **Logistic Regression**: Efficient for binary classification tasks  
-- **Clean Pipeline**: Minimal dependencies, maximum reproducibility  
+## Technical Rationale
+
+- **TF-IDF**: Prioritizes discriminative terms in classification
+- **Logistic Regression**: Provides optimal performance for text classification tasks
+- **Modular Architecture**: Ensures maintainability and extensibility
 
 ---
 
-## Roadmap  
-- [ ] Cross-validation for model robustness  
-- [ ] Docker containerization  
-- [ ] Precision/recall metrics analysis  
-- [ ] Flask API integration  
+## Development Roadmap
+
+- Cross-validation implementation
+- Docker containerization
+- Comprehensive evaluation metrics
+- API integration for production deployment
 
 ---
 
-## Contribution Guidelines  
-Technical improvements welcome:  
-- Code optimization  
-- Additional test cases  
-- Documentation enhancements  
+## Contribution Guidelines
+
+Seeking contributions in:
+- Performance optimization
+- Test case expansion
+- Documentation enhancement
 
 ---
 
 **License**: MIT  
-**Developer**: [Your Name] | **Dataset Source**: UCI Machine Learning Repository  
-
-*Balancing technical depth with professional presentation*  
+**Developer**: Arpita  
