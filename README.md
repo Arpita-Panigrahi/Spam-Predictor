@@ -1,4 +1,4 @@
-# Spam Detection AI: Email Classification System
+# Spam Mail Detector
 
 ## Project Overview
 A machine learning solution that identifies spam emails with **96.7% accuracy**, leveraging natural language processing and classification algorithms for reliable message filtering.
